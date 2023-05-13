@@ -16,7 +16,32 @@ apt install -y \
   bash-builtins \
   bash-doc \
   trash-cli \
-  pwgen
+  pwgen \
+  sshfs \
+  at \
+  recode \
+  moreutils \
+  toilet toilet-fonts \
+  age \
+  autossh \
+  imagemagick \
+  fail2ban \
+  apache2 \
+  apache2-dev \
+  libapache2-mod-php \
+  libapache2-mod-security2 \
+  libapache2-mod-evasive \
+  php-cli \
+  "$srcdir"/fake-ubuntu-advantage-tools.deb
+
+# get rid of ubuntu spam...
+sed -Ezi.orig \
+  -e 's/(def _output_esm_service_status.outstream, have_esm_service, service_type.:\n)/\1    return\n/' \
+  -e 's/(def _output_esm_package_alert.*?\n.*?\n.:\n)/\1    return\n/' \
+  /usr/lib/update-notifier/apt_check.py
+/usr/lib/update-notifier/update-motd-updates-available --force
+sed -i 's/^ENABLED=.*/ENABLED=0/' /etc/default/motd-news
+rm -rf /var/lib/ubuntu-advantage/messages/motd-esm-announce
 
 # create scs and caninst groups
 getent group scs >/dev/null || addgroup --gid 10120 scs
