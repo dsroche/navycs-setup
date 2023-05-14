@@ -65,6 +65,28 @@ any settings you want.
 The error and access logs should be readable by you and are located in
 the usual locations, e.g. `/var/log/apaghe2/errors.log`.
 
+## Cgi scripts (also python, perl)
+
+If you use CGI scripts like `.cgi` or `.py`, this can work too! But it's
+disabled by default so that those of us who just want to serve a `.py`
+file as straight source code can do so.
+
+To enable it in some directory (and all subdirectories), create a file
+called `.htaccess` with a line like this:
+
+    AddHandler cgi-script .cgi .pl .py
+
+Then a simple python server-side script like the following should work:
+
+    #!/usr/bin/env python3
+
+    print("Content-Type: text/html")
+    print()
+    print('<p>hello</p>');
+
+Make sure you do a `chmod a+rx scriptname.py` to make it executable and
+world-readable.
+
 ## If you want something else to be installed or enabled...
 
 ...just ask!

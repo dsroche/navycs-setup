@@ -1,3 +1,6 @@
 [submodule "UnspamifyUbuntu"]
 	path = UnspamifyUbuntu
 	url = https://github.com/Skyedra/UnspamifyUbuntu
+[submodule "parsedown"]
+	path = parsedown
+	url = https://github.com/erusev/parsedown

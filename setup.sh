@@ -73,6 +73,7 @@ for f in *; do
 done
 popd
 a2enmod userdir
+a2enmod cgi
 csuconf=/etc/apache2/conf-available/csusers.conf
 upnew "$srcdir/csusers.conf" "$csuconf"
 upnew "$srcdir/navycs.conf" "/etc/apache2/sites-available/navycs.conf"
