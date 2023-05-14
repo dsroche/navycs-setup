@@ -1,0 +1,2 @@
+#!/bin/sh
+batcat --style header,grid /var/www/html/readme.md

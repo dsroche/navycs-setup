@@ -48,6 +48,7 @@ apt install -y \
   libapache2-mod-security2 \
   libapache2-mod-evasive \
   php-cli \
+  bat \
   "$srcdir"/fake-ubuntu-advantage-tools.deb
 snap install --classic certbot
 
@@ -87,6 +88,9 @@ email='roche@usna.edu'
 # create scs and caninst groups
 getent group scs >/dev/null || addgroup --gid 10120 scs
 getent group caninst >/dev/null || addgroup caninst
+
+# set up /etc/skel
+rsync -rulpE "$srcdir/skel/" /etc/skel/
 
 # array of usernames for sudo-enabled users (admins)
 sudo_users=( roche )
@@ -135,6 +139,11 @@ for u in "${sudo_users[@]}"; do
     adduser "$u" "$g" >/dev/null
   done
 done
+
+# make sure automatic updgrades are enabled
+if [[ ! -e '/etc/apt/apt.conf.d/20auto-upgrades' ]] || ! grep -q '^[^#]*1' '/etc/apt/apt.conf.d/20auto-upgrades'; then
+  dpkg-reconfigure --priority=low unattended-upgrades
+fi
 
 # ssh setup (caution - will make ubuntu user un-sshable! make sure you have an admin user!)
 upnew "$srcdir/cs-ssh.conf" "/etc/ssh/sshd_config.d/cs-ssh.conf"
