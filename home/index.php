@@ -44,6 +44,13 @@ if (count($users) <= 6) {
   echo '</table>';
 }
 ?>
+<h2>How can I join?</h2>
+<p>If you are a USNA faculty member and want your content hosted here,
+email Dan Roche with your numeric uid and an ssh public key file.
+Or, if you want to be fancy about it, make a pull request
+on <a href="https://github.com/dsroche/navycs-setup">this GitHub project</a>
+according to the instructions in the README.
+</p>
 <h2>Why does this exist?</h2>
 <p>This site exists for those stubborn CS department faculty who
 refuse to use the CMS provided by ITSD which
