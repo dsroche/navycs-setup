@@ -1,0 +1,3 @@
+#!/bin/sh
+# motd for navycs.cc
+toilet -f smbraille NAVYCS.CC
