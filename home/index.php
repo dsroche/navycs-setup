@@ -52,16 +52,7 @@ on <a href="https://github.com/dsroche/navycs-setup">this GitHub project</a>
 according to the instructions in the README.
 </p>
 <h2>Why does this exist?</h2>
-<p>This site exists for those stubborn CS department faculty who
-refuse to use the CMS provided by ITSD which
-has a <a href="https://www.hannonhill.com/cascadecms/latest/developing-in-cascade/rest-api/index.html">janky API</a>
-and doesn't allow simple things like file upload from the command line.
-</p>
-<p>Because many of us are frequently updating the content of our
-sites to keep our courses relevant, we are spending our own money
-to (cheaply) fund this website.
-</p>
-<?php
-
-?>
+<p>There is no reason for this website to exist.
+In fact, it should not exist and for many years had no reason to exist.
+We hope that it will be only temporary.</p>
 </body></html>
