@@ -52,7 +52,7 @@ on <a href="https://github.com/dsroche/navycs-setup">this GitHub project</a>
 according to the instructions in the README.
 </p>
 <h2>Why does this exist?</h2>
-<p>There is no reason for this website to exist.
-In fact, it should not exist and for many years had no reason to exist.
+<p>There is no reason for this web server to exist.
+In fact, it <em>should</em> not exist and for many years had no reason to exist.
 We hope that it will be only temporary.</p>
 </body></html>
