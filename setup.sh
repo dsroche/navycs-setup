@@ -77,14 +77,19 @@ a2enmod cgi
 csuconf=/etc/apache2/conf-available/csusers.conf
 upnew "$srcdir/csusers.conf" "$csuconf"
 upnew "$srcdir/navycs.conf" "/etc/apache2/sites-available/navycs.conf"
+upnew "$srcdir/rochework.conf" "/etc/apache2/sites-available/rochework.conf"
 a2dissite 000-default
 a2ensite navycs
+a2ensite rochework
 a2enconf csusers
 
 # set up SSL (note, requires dns already set up)
 domain='navycs.cc'
 email='roche@usna.edu'
 [[ -e "/etc/letsencrypt/live/$domain" ]] || certbot --agree-tos -m "$email" --apache -d "$domain,www.$domain"
+dom2='roche.work'
+[[ -e "/etc/letsencrypt/live/$dom2" ]] || certbot --agree-tos -m "$email" --apache -d "$dom2,www.$dom2"
+
 
 # create scs and caninst groups
 getent group scs >/dev/null || addgroup --gid 10120 scs
