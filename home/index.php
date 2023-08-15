@@ -1,19 +1,19 @@
 <?php
 header("Content-Type: text/html; charset=UTF-8");
 ?><!DOCTYPE html><html><head><meta charset="UTF-8">
-<title>USNA CS Department Web Pages</title>
+<title>USNA CS Department Web Blogs</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="simple.css">
 </head>
 <body>
-<h1>CS Department Web Pages</h1>
+<h1>CS Department Web Blogs</h1>
 <h2>USNA links</h2>
 <ul>
 <li><a href="https://www.usna.edu/">U.S. Naval Academy</a></li>
 <li><a href="https://usna.edu/CS/">Computer Science Department</a></li>
 <li><a href="https://www.instagram.com/usnacompsci">CS Department Instagram</a></li>
 </ul>
-<h2>Faculty web sites</h2>
+<h2>Faculty web blogs</h2>
 <?php
 echo '<table>';
 function ulink($user) {
@@ -45,7 +45,7 @@ if (count($users) <= 6) {
 }
 ?>
 <h2>How can I join?</h2>
-<p>If you are a USNA faculty member and want your content hosted here,
+<p>If you are a USNA faculty member and want your blog hosted here,
 email Dan Roche with your numeric uid and an ssh public key file.
 Or, if you want to be fancy about it, make a pull request
 on <a href="https://github.com/dsroche/navycs-setup">this GitHub project</a>
