@@ -6,14 +6,14 @@ header("Content-Type: text/html; charset=UTF-8");
 <link rel="stylesheet" type="text/css" href="simple.css">
 </head>
 <body>
-<h1>CS Department Web Blogs</h1>
+<h1></h1>
 <h2>USNA links</h2>
 <ul>
 <li><a href="https://www.usna.edu/">U.S. Naval Academy</a></li>
 <li><a href="https://usna.edu/CS/">Computer Science Department</a></li>
 <li><a href="https://www.instagram.com/usnacompsci">CS Department Instagram</a></li>
 </ul>
-<h2>Faculty web blogs</h2>
+<h2>Faculty</h2>
 <?php
 echo '<table>';
 function ulink($user) {
@@ -44,6 +44,12 @@ if (count($users) <= 6) {
   echo '</table>';
 }
 ?>
+<h2>Enjoy!</h2>
+<p>This image was created by
+<a href="https://stability.ai/blog/stable-diffusion-public-release">Stable Diffusion</a>
+with the prompt &quot;soothing&quot;. I hope it calms your day.</p>
+<img src="soothing.png" />
+<!--
 <h2>How can I join?</h2>
 <p>If you are a USNA faculty member and want your blog hosted here,
 email Dan Roche with your numeric uid and an ssh public key file.
@@ -55,4 +61,5 @@ according to the instructions in the README.
 <p>There is no reason for this web server to exist.
 In fact, it <em>should</em> not exist and for many years had no reason to exist.
 We hope that it will be only temporary.</p>
+-->
 </body></html>
